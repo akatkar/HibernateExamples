@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.akatkar.hibernate3.CustomerInfo" table="custInfo">
+          <id name="id" type="int" column="id">
+            <generator class="assigned"/>
+        </id>
+        <property name="custName" column="custName" type="string"/>
+        <property name="address" column="address" type="string"/>
+        <property name="town" column="town" type="string"/>
+        <property name="city" column="city" type="string"/>
+        <property name="phone" column="phone" type="string"/>
+              
+  </class>  
+
+</hibernate-mapping>
