@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-mapping PUBLIC 
-    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="com.akatkar.hibarnate4.CustomerInfo" table="custInfo">
-          <id name="id" type="int" column="id">
-            <generator class="assigned"/>
-        </id>
-        <property name="custName" column="custName" type="string"/>
-        <property name="address" column="address" type="string"/>
-        <property name="town" column="town" type="string"/>
-        <property name="city" column="city" type="string"/>
-        <property name="phone" column="phone" type="string"/>
-              
-  </class>  
-
+  <class name="com.akatkar.hb4.ex01.withxml.CustomerInfo" table="custInfo">
+    <id column="id" name="id" type="int">
+      <generator class="assigned"/>
+    </id>
+    <property column="custName" name="custName" type="string"/>
+    <property column="address" name="address" type="string"/>
+    <property column="town" name="town" type="string"/>
+    <property column="city" name="city" type="string"/>
+    <property column="phone" name="phone" type="string"/>
+  </class>
 </hibernate-mapping>
