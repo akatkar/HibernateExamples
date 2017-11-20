@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.akatkar.hibarnate4;
 
 import com.akatkar.hibarnate4.annotation.School;
@@ -20,6 +15,7 @@ import com.akatkar.hibarnate4.onetoone.PersonDetail;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.tool.hbm2ddl.SchemaExport;
 
 /**
  *
@@ -47,9 +43,10 @@ public final class HibernateUtil {
                 .addAnnotatedClass(Project.class)
                 .addAnnotatedClass(Module.class)
                 .addAnnotatedClass(Task.class);
-
+        
         StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder();
         builder.applySettings(cfg.getProperties());
+        new SchemaExport(cfg).create(true,true);
         SESSION_FACTORY = cfg.buildSessionFactory(builder.build());
     }
     

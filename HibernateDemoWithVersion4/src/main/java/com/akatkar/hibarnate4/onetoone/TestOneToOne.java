@@ -1,13 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.akatkar.hibarnate4.onetoone;
 
 import com.akatkar.hibarnate4.HibernateUtil;
-import com.akatkar.hibarnate4.compound.Account;
-import com.akatkar.hibarnate4.compound.CoumpoundKey;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
